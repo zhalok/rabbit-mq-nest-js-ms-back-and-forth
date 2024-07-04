@@ -18,7 +18,7 @@ export class AppService {
 
     await this.simulateLongTask();
 
-    this.sendMessage('love from service-2');
+    // this.sendMessage('love from service-2');
   }
 
   private async simulateLongTask() {

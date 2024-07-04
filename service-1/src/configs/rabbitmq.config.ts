@@ -1,7 +1,7 @@
 // rabbitmq.config.ts
 import { RmqOptions, Transport } from '@nestjs/microservices';
 
-export const rabbitMQPublisherConfig = (): any => ({
+export const rabbitMQPublisherConfig = () => ({
   transport: Transport.RMQ,
   options: {
     urls: [process.env.RABBITMQ_URL], // RabbitMQ connection URL
@@ -9,7 +9,7 @@ export const rabbitMQPublisherConfig = (): any => ({
   },
 });
 
-export const rabbitMQConsumerConfig = (): any => ({
+export const rabbitMQConsumerConfig = () => ({
   transport: Transport.RMQ,
   options: {
     urls: [process.env.RABBITMQ_URL], // RabbitMQ connection URL

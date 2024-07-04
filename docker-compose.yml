@@ -11,27 +11,38 @@ services:
       RABBITMQ_DEFAULT_USER: user
       RABBITMQ_DEFAULT_PASS: password
 
-  service-1:
-    build:
-      context: ./service-1
-    container_name: service-1
-    ports:
-      - "3000:3000"
-    depends_on:
-      - rabbitmq
-    environment:
-      RABBITMQ_URL: amqp://rabbitmq:5672
+  # service-1:
+  #   build:
+  #     context: ./service-1
+  #   container_name: service-1
+  #   ports:
+  #     - "3000:3000"
+  #   depends_on:
+  #     - rabbitmq
+  #   environment:
+  #     RABBITMQ_URL: amqp://user:password@rabbitmq:5672
 
-  service-2:
-    build:
-      context: ./service-2
-    container_name: service-2
-    ports:
-      - "3001:3001"
-    depends_on:
-      - rabbitmq
-    environment:
-      RABBITMQ_URL: amqp://rabbitmq:5672
+  # service-2:
+  #   build:
+  #     context: ./service-2
+  #   container_name: service-2
+  #   ports:
+  #     - "3001:3001"
+  #   depends_on:
+  #     - rabbitmq
+  #   environment:
+  #     RABBITMQ_URL: amqp://user:password@rabbitmq:5672
 
-volumes:
-  rabbitmq_data:
+  # service-3:
+  #   build:
+  #     context: ./service-3
+  #   container_name: service-3
+  #   ports:
+  #     - "3002:3002"
+  #   depends_on:
+  #     - rabbitmq
+  #   environment:
+  #     RABBITMQ_URL: amqp://user:password@rabbitmq:5672
+
+  # volumes:
+  #   - ./storage/rabbitmq:/data:
